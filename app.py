@@ -4,7 +4,7 @@ import os
 
 st.set_page_config(
     page_title="DevAI | Code Auditor", 
-    page_icon="⚡", 
+    page_icon="", 
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -17,7 +17,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown("# ⚡ DevAI: Static Code Auditor & Optimizer")
+st.markdown("# DevAI: Static Code Auditor & Optimizer")
 st.markdown("##### *An automated assistant to audit syntax, identify logical flaws, and optimize runtime complexity.*")
 st.markdown("---")
 
@@ -43,7 +43,7 @@ with col1:
         placeholder=f"# Write or paste your {language} implementation logic here..."
     )
     
-    analyze_clicked = st.button("Execute Deep Code Audit 🚀")
+    analyze_clicked = st.button("Execute Deep Code Audit")
 
 with col2:
     st.markdown("### 📊 Audit & Analysis Report")
@@ -65,14 +65,14 @@ with col2:
                     
                     Provide the response in this exact compact format without any extra description, introduction, or code comments:
                     
-                    ### 🛠️ Fixed Code
+                    ### Fixed Code
                     (Provide only the completely fixed, clean code block here inside a code fence. Do not include any inline comments)
                     
-                    ### 🔍 Quick Fix Notes
+                    ### Quick Fix Notes
                     * **Main Issue:** (1 line summary of what was broken)
                     * **Fix Applied:** (1 line summary of what you changed)
                     
-                    ### 📈 Performance Metrics
+                    ### Performance Metrics
                     * **Time Complexity:** (Provide metric like O(1) or O(N))
                     * **Space Complexity:** (Provide metric like O(1) or O(N))
                     * **Recommendation:** (1 short best-practice tip)
