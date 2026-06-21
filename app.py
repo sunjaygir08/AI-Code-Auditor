@@ -1,5 +1,5 @@
 import streamlit as st
-from google import genai
+from google.genai import client
 import os
 
 st.set_page_config(
@@ -29,7 +29,7 @@ else:
 if not API_KEY:
     st.warning("⚠️ System Environment Alert: Please configure your GEMINI_API_KEY in secrets.toml.")
 else:
-    client = genai.Client(api_key=API_KEY)
+    client = client(api_key=API_KEY)
 
 col1, col2 = st.columns([1, 1], gap="large")
 
